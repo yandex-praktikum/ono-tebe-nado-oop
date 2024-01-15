@@ -1,0 +1,24 @@
+@use "variables" as *;
+@use "mixins";
+
+html, body.page {
+	height: 100%;
+	font-family: $font;
+	font-size: $baseFontSize;
+	color: $baseFontColor;
+	background: $background;
+}
+
+.page__wrapper {
+	width: 100%;
+
+	&_locked {
+		position: fixed;
+	}
+}
+
+.page__container {
+	@include mixins.flex(column);
+	padding: $defaultPadding 0;
+	gap: 3rem;
+}

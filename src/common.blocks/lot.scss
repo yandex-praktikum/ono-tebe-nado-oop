@@ -1,0 +1,114 @@
+@use "variables" as *;
+@use "mixins";
+
+.lot {
+  @include mixins.flex(column);
+  gap: 3rem;
+  background-color: white;
+  border-radius: $borderRadius;
+  padding: $defaultPadding;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  &__status {
+    @include mixins.flex(column);
+    gap: 3rem;
+  }
+
+  &__content {
+    @include mixins.flex(column);
+    gap: 0.5rem;
+    z-index: 1;
+  }
+
+  &__foot {
+    @include mixins.flex(row);
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1;
+  }
+
+  &__image {
+    width: 411px;
+    height: 411px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0.75rem 0;
+  }
+
+  &__auction {
+    @include mixins.flex(column);
+    align-items: center;
+
+    &-timer {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    &-text {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  &__bid {
+    flex-direction: row;
+    padding: 0 $defaultPadding;
+
+    &-amount {
+      @include mixins.flex(row);
+      > * {
+        text-align: right;
+      }
+
+      &::after {
+        content: ' ₽';
+        padding: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__history {
+    @include mixins.flex(column);
+    border-top: 1px solid #232427;
+    cursor: default;
+
+    &-caption {
+      opacity: 0.5;
+      margin: 1rem 0;
+    }
+
+    &-bids {
+      @include mixins.flex(row);
+      gap: 3rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-left: 1.5rem;
+
+      &:first-child {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      &::after {
+        content: ' ₽';
+      }
+    }
+  }
+}

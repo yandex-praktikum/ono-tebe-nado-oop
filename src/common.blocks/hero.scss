@@ -1,0 +1,31 @@
+@use "variables" as *;
+@use "mixins";
+
+.hero {
+  @include mixins.container;
+  @include mixins.flex(column);
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  gap: 0.5rem;
+  background-color: white;
+  border-radius: $borderRadius;
+  padding: 3rem;
+  height: 25rem;
+  box-sizing: border-box;
+
+  &__background {
+    @include mixins.sublayer;
+    object-fit: cover;
+  }
+  &__title {
+    font-size: 3.5rem;
+    margin: 0;
+    z-index: 1;
+  }
+  &__description {
+    font-size: 1.5rem;
+    margin: 0;
+    z-index: 1;
+  }
+}

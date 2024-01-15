@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "mixins";
+
+.card {
+  @include mixins.flex(column);
+  background-color: white;
+  border-radius: $borderRadius;
+  padding: $defaultPadding 15rem $defaultPadding $defaultPadding;
+  height: 27.25rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    @include mixins.flex(column);
+    gap: 0.5rem;
+    z-index: 1;
+  }
+
+  &__foot {
+    @include mixins.flex(row);
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1;
+  }
+
+  &__image {
+    position: absolute;
+    width: 411px;
+    height: 411px;
+    right: -141px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__status {
+    color: $statusDefault;
+
+    &_active {
+      color: $statusOpened;
+    }
+
+    &_closed {
+      color: $statusClosed;
+    }
+
+    &::before {
+      content: '• ';
+    }
+  }
+}

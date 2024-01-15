@@ -1,0 +1,23 @@
+@use "variables" as *;
+@use "mixins";
+
+.tabs {
+  @include mixins.flex(row);
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  &__item {
+    &_active {
+      color: white;
+      background-color: $secondaryBackground;
+      &:disabled {
+        opacity: 1;
+      }
+
+      &:hover {
+        background-color: $secondaryBackground!important;
+      }
+    }
+  }
+}

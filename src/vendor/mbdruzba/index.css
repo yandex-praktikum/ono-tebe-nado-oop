@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "MB Druzba";
+    src: url("./MB_Druzba-Regular-L.woff2") format("woff2"),
+    url("./MB_Druzba-Regular-L.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}

@@ -1,0 +1,384 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000"/>
+    <link rel="icon" href="/favicon.ico"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+
+    <title>Аукцион</title>
+    <meta name="description" content="">
+</head>
+<body class="page">
+<div class="page__wrapper">
+    <header class="header">
+        <div class="header__container">
+            <a class="header__logo" href="/">
+                <img class="header__logo-image" src="<%=require('../images/logo.svg')%>" alt="Film! logo"/>
+            </a>
+            <nav class="header__menu">
+                <a class="header__menu-item" href="#">Главная</a>
+                <a class="header__menu-item" href="#">Посмотреть лоты</a>
+                <a class="header__menu-item" href="#">Об аукционе</a>
+            </nav>
+            <button class="header__basket">
+                <span class="header__basket-counter" data-element="basket" data-component="basket">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page__container">
+        <section class="hero hero_centered">
+            <h1 class="hero__title">Оно тебе надо!</h1>
+            <p class="hero__description">Аукцион вещей, в которые никто не верил</p>
+            <img class="hero__background" src="<%=require('../images/ligthning-decor.png')%>" alt=""/>
+        </section>
+
+        <section class="catalog">
+            <h2 class="catalog__title">Лоты</h2>
+            <div  class="catalog__items" data-element="catalog" data-component="catalog"></div>
+        </section>
+
+        <section class="about">
+            <img class="about__image" src="<%=require('../images/auction.jpg')%>" alt=""/>
+            <h2 class="about__title">Об аукционе</h2>
+            <p class="about__description">Здесь вы не встретите очередное пафосное собрание невероятно дорогого
+                антиквариата. Наши лоты вообще не должны были попасть ни на один аукцион. Потому что кому нужен дневник
+                девочки-подростка или картина, которую может нарисовать даже ребёнок? Кому нужны все эти странные вещи,
+                созданные любителями? Слишком сложные или, наоборот, слишком простые. Опережающие своё время. В пух и
+                прах растерзанные критиками. Непринятые и непонятые. Когда-то они казались просто неудачными.
+                Но, несмотря на критику, кажущуюся простоту или сложность, сейчас без этих лотов невозможно представить
+                современную культуру. Когда в эти вещи не верил никто, продолжали верить их создатели. И сейчас эти лоты
+                стали культовыми.</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <a class="footer__logo" href="/">
+                <img class="header__logo-image" src="<%=require('../images/logo.svg')%>" alt="Film! logo"/>
+            </a>
+            <div class="footer__menu">
+                <a href="#" class="footer__menu-item">наб. Принсенграхт 263-265, Амстердам</a>
+                <a href="#" class="footer__menu-item">info@sobaka.ge</a>
+                <a href="#" class="footer__menu-item">+9 999 555 5555</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="modal" id="modal-container">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+            <article class="lot">
+                <img class="lot__image" src="<%=require('../images/lot1.jpg')%>" alt=""/>
+                <div class="lot__status">
+                    <span class="lot__status-timer">1д 7ч 23м 33сек</span>
+                    <span class="lot__status-text">До закрытия аукциона</span>
+                </div>
+                <form class="form lot__bid">
+                    <label class="form__label form__label_grouped lot__bid-amount">
+                        <input class="form__input" type="text" placeholder="Ваша ставка" />
+                    </label>
+                    <button class="button">Поставить</button>
+                </form>
+                <div class="lot__history">
+                    <span class="lot__history-caption">Последние ставки:</span>
+                    <ul class="lot__history-bids">
+                        <li class="lot__history-item">1000</li>
+                        <li class="lot__history-item">1500</li>
+                        <li class="lot__history-item">2200</li>
+                        <li class="lot__history-item">6900</li>
+                        <li class="lot__history-item">7300</li>
+                    </ul>
+                </div>
+                <div class="lot__content">
+                    <h1 class="lot__title">Фильм режиссёра, который бросил киношколу</h1>
+                    <p class="lot__description">
+                        Представьте, что вы поступили в киношколу. Вы мечтали стать режиссёром
+                        очень давно, много и упорно для этого работали. И наконец-то у вас получилось! Воодушевившись,
+                        вы идёте на первое занятие. Садитесь за стол, достаёте блокнот и ручки. В аудиторию заходит
+                        преподаватель и начинает лекцию. Вы внимательно слушаете — сейчас вам расскажут, как рождаются
+                        шедевры.
+                    </p>
+                    <p class="lot__description">
+                        Вместо этого вам говорят: «Если кто-то пришёл сюда, потому что хочет снять второго
+                        „Терминатора“, то вы ошиблись дверью».</p>
+                    <p class="lot__description">
+                        Именно это услышал на своём первом занятии Пол Томас Андерсон — один из лучших режиссёров
+                        современности. А ещё — фанат «Терминатора».</p>
+                    <p class="lot__description">
+                        После этих слов преподавателя Пол Томас Андерсон положил ручки и блокнот в сумку, встал и вышел.
+                        Он больше не возвращался на занятия.</p>
+                    <p class="lot__description">
+                        Наш лот № 1 — фильмы Пола Томаса Андерсона.</p>
+                    <p class="lot__description">
+                        В копилке у режиссёра несколько престижных кинопремий (в том числе «Золотая пальмовая ветвь»).
+                        Его картины — «Нефть», «Любовь, сбивающая с ног», «Мастер» и другие — признаны культовыми.
+                        Актёры, которые снимаются у Андерсона, регулярно получают номинации на «Оскар». И да, он бросил
+                        киношколу. Но, что важнее, не бросил снимать.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+            <nav class="tabs">
+                <button disabled class="button button_outline tabs__item_active">Активные</button>
+                <button class="button button_outline">Закрытые</button>
+            </nav>
+            <div class="basket">
+                <div class="basket__item bid">
+                    <img class="bid__image" src="<%=require('../images/lot1.jpg')%>" alt="" />
+                    <div class="bid__description">
+                        <h3 class="bid__title">Фильм режиссёра, который бросил киношколу</h3>
+                        <span class="bid__amount">10000</span>
+                        <span class="bid__status">Моя ставка</span>
+                    </div>
+                    <button class="bid__open" />
+                </div>
+                <div class="basket__item bid">
+                    <img class="bid__image" src="<%=require('../images/lot2.jpg')%>" alt="" />
+                    <div class="bid__description">
+                        <h3 class="bid__title">Книга, где описан один скучный день из жизни рекламного агента</h3>
+                        <span class="bid__amount">5000</span>
+                    </div>
+                    <button class="bid__open" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+            <nav class="tabs">
+                <button class="button button_outline">Активные</button>
+                <button disabled class="button button_outline tabs__item_active">Закрытые</button>
+            </nav>
+            <form class="basket">
+                <div class="basket__list">
+                    <div class="basket__item bid">
+                        <img class="bid__image" src="<%=require('../images/lot1.jpg')%>" alt="" />
+                        <div class="bid__description">
+                            <h3 class="bid__title">Фильм режиссёра, который бросил киношколу</h3>
+                            <span class="bid__amount">10000</span>
+                            <span class="bid__status">Моя ставка</span>
+                        </div>
+                        <label class="bid__selector">
+                            <input type="checkbox" />
+                        </label>
+                    </div>
+                    <div class="basket__item bid">
+                        <img class="bid__image" src="<%=require('../images/lot2.jpg')%>" alt="" />
+                        <div class="bid__description">
+                            <h3 class="bid__title">Книга, где описан один скучный день из жизни рекламного агента</h3>
+                            <span class="bid__amount">5000</span>
+                        </div>
+                        <label class="bid__selector">
+                            <input type="checkbox" />
+                        </label>
+                    </div>
+                </div>
+                <div class="basket__actions">
+                    <span class="basket__total">15000</span>
+                    <button class="button basket__action">Оформить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+            <nav class="tabs">
+                <button class="button button_outline">Активные</button>
+                <button disabled class="button button_outline tabs__item_active">Закрытые</button>
+            </nav>
+            <div class="state">
+                <img class="state__image" src="<%=require('../images/soft-flower.svg')%>" />
+                <h2 class="state__title">Тут пока ничего нет</h2>
+                <button type="button" class="button state__action">На главную</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+            <div class="state">
+                <img class="state__image" src="<%=require('../images/ready.svg')%>" />
+                <h2 class="state__title">Покупка скоро будет у вас</h2>
+                <p class="state__subtitle">Оформленные лоты удалены из корзины</p>
+                <button type="button" class="button state__action">На главную</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal">
+    <div class="modal__container">
+        <button class="modal__close" aria-label="закрыть"></button>
+        <div class="modal__content">
+            <form class="form">
+                <label class="form__label">
+                    <input type="email" class="form__input" placeholder="Email" />
+                </label>
+                <label class="form__label">
+                    <input type="text" class="form__input" placeholder="+7 (" />
+                </label>
+                <div class="form__footer">
+                    <button class="button">Оформить</button>
+                    <span class="form__error">Заполните поля</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <template id="success">
+        <div class="state">
+            <img class="state__image" src="<%=require('../images/ready.svg')%>" />
+            <h2 class="state__title">Покупка скоро будет у вас</h2>
+            <p class="state__subtitle">Оформленные лоты удалены из корзины</p>
+            <button type="button" class="button state__action">На главную</button>
+        </div>
+    </template>
+
+    <template id="order">
+        <form class="form" name="order">
+            <label class="form__label">
+                <input name="email" type="email" class="form__input" placeholder="Email" />
+            </label>
+            <label class="form__label">
+                <input name="phone" type="text" class="form__input" placeholder="+7 (" />
+            </label>
+            <div class="form__footer">
+                <button type="submit" class="button">Оформить</button>
+                <span class="form__errors">Заполните поля</span>
+            </div>
+        </form>
+    </template>
+
+    <template id="tabs">
+        <nav class="tabs">
+            <button name="active" class="button button_outline">Активные</button>
+            <button name="closed" disabled class="button button_outline">Закрытые</button>
+        </nav>
+    </template>
+
+    <template id="basket">
+        <div class="basket">
+            <div class="basket__list"></div>
+            <div class="basket__actions">
+                <span class="basket__total"></span>
+                <button class="button basket__action">Оформить</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="bids">
+        <div class="basket">
+            <div class="basket__list"></div>
+        </div>
+    </template>
+
+    <template id="auction">
+        <div class="lot__status">
+            <div class="lot__auction">
+                <span class="lot__auction-timer"></span>
+                <span class="lot__auction-text"></span>
+            </div>
+            <form class="form lot__bid">
+                <label class="form__label form__label_grouped lot__bid-amount">
+                    <input class="form__input" type="text" placeholder="Ваша ставка" />
+                </label>
+                <button class="button">Поставить</button>
+            </form>
+            <div class="lot__history">
+                <span class="lot__history-caption">Последние ставки:</span>
+                <ul class="lot__history-bids">
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <template id="bid">
+        <div class="basket__item bid">
+            <img class="bid__image" src="<%=require('../images/lot1.jpg')%>" alt="" />
+            <div class="bid__description">
+                <h3 class="bid__title"></h3>
+                <span class="bid__amount"></span>
+                <span class="bid__status">Моя ставка</span>
+            </div>
+            <button class="bid__open"></button>
+        </div>
+    </template>
+
+    <template id="sold">
+        <div class="basket__item bid">
+            <img class="bid__image" src="<%=require('../images/lot1.jpg')%>" alt="" />
+            <div class="bid__description">
+                <h3 class="bid__title"></h3>
+                <span class="bid__amount"></span>
+                <span class="bid__status">Моя ставка</span>
+            </div>
+            <label class="bid__selector">
+                <input type="checkbox" class="bid__selector-input" />
+            </label>
+        </div>
+    </template>
+
+    <template id="preview">
+        <article class="lot">
+            <img class="lot__image" src="<%=require('../images/lot1.jpg')%>" alt=""/>
+            <div class="lot__status"></div>
+            <div class="lot__content">
+                <h1 class="lot__title"></h1>
+                <p class="lot__description"></p>
+            </div>
+        </article>
+    </template>
+
+    <template id="card">
+        <article class="catalog_item card">
+            <img class="card__image" src="<%=require('../images/lot1.jpg')%>" alt=""/>
+            <div class="card__content">
+                <h1 class="card__title"></h1>
+                <p class="card__description"></p>
+            </div>
+            <div class="card__foot">
+                <button class="card__action button">Сделать ставку</button>
+                <span class="card__status"></span>
+            </div>
+        </article>
+    </template>
+
+</body>
+</html>

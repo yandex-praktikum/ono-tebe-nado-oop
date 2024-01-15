@@ -1,0 +1,31 @@
+@use "variables" as *;
+@use "mixins";
+
+.catalog {
+  @include mixins.container($defaultPadding, $extendedPadding, $extendedPadding);
+  @include mixins.flex(column);
+  background-color: $secondary;
+  border-radius: $borderRadius;
+  align-items: center;
+  gap: 2rem;
+
+  &__title {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  &__items {
+    @include mixins.flex(column);
+    gap: 2rem;
+  }
+
+  &__item {
+    border: none;
+    border-radius: 0.8rem;
+    @include mixins.selectable($secondary, 2px, $hover);
+
+    &::after {
+      border-radius: 0.8rem;
+    }
+  }
+}

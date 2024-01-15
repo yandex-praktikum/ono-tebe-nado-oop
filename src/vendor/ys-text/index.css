@@ -1,0 +1,279 @@
+/*
+	This font software is the property of Commercial Type.
+
+	You may not modify the font software, use it on another website, or install it on a computer.
+
+	License information is available at http://commercialtype.com/eula
+	For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+	Copyright (C) 2016 Schwartzco Inc.
+	
+	*/
+
+
+	.YSDisplay-Thin {
+		font-family: "YS Display";
+		font-weight: 100;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSDisplay-Light {
+		font-family: "YS Display";
+		font-weight: 300;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSDisplay-Regular {
+		font-family: "YS Display";
+		font-weight: 400;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSDisplay-Medium {
+		font-family: "YS Display";
+		font-weight: 500;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSDisplay-Bold {
+		font-family: "YS Display";
+		font-weight: 700;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSDisplay-Heavy {
+		font-family: "YS Display";
+		font-weight: 900;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSText-Light {
+		font-family: "YS Text";
+		font-weight: 300;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSText-LightItalic {
+		font-family: "YS Text";
+		font-weight: 300;
+		font-style: italic;
+		font-stretch: normal;
+	}
+
+	.YSText-Regular {
+		font-family: "YS Text";
+		font-weight: 400;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSText-RegularItalic {
+		font-family: "YS Text";
+		font-weight: 400;
+		font-style: italic;
+		font-stretch: normal;
+	}
+
+	.YSText-Medium {
+		font-family: "YS Text";
+		font-weight: 500;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSText-MediumItalic {
+		font-family: "YS Text";
+		font-weight: 500;
+		font-style: italic;
+		font-stretch: normal;
+	}
+
+	.YSText-Bold {
+		font-family: "YS Text";
+		font-weight: 700;
+		font-style: normal;
+		font-stretch: normal;
+	}
+
+	.YSText-BoldItalic {
+		font-family: "YS Text";
+		font-weight: 700;
+		font-style: italic;
+		font-stretch: normal;
+	}
+
+	@font-face {
+		font-family: "YS Display";
+		src: url("./YS Display-Thin.eot");
+		src: url("./YS Display-Thin.eot?#iefix") format("embedded-opentype"),
+		url("./YS Display-Thin.woff2") format("woff2"),
+		url("./YS Display-Thin.woff") format("woff"),
+		url("./YS Display-Thin.ttf") format("truetype"),
+		url("./YS Display-Thin.svg#YSDisplay-Thin") format("svg");
+		font-weight: 100;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Display";
+		src: url("./YS Display-Light.eot");
+		src: url("./YS Display-Light.eot?#iefix") format("embedded-opentype"),
+		url("./YS Display-Light.woff2") format("woff2"),
+		url("./YS Display-Light.woff") format("woff"),
+		url("./YS Display-Light.ttf") format("truetype"),
+		url("./YS Display-Light.svg#YSDisplay-Light") format("svg");
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Display";
+		src: url("./YS Display-Regular.eot");
+		src: url("./YS Display-Regular.eot?#iefix") format("embedded-opentype"),
+		url("./YS Display-Regular.woff2") format("woff2"),
+		url("./YS Display-Regular.woff") format("woff"),
+		url("./YS Display-Regular.ttf") format("truetype"),
+		url("./YS Display-Regular.svg#YSDisplay-Regular") format("svg");
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Display";
+		src: url("./YS Display-Medium.eot");
+		src: url("./YS Display-Medium.eot?#iefix") format("embedded-opentype"),
+		url("./YS Display-Medium.woff2") format("woff2"),
+		url("./YS Display-Medium.woff") format("woff"),
+		url("./YS Display-Medium.ttf") format("truetype"),
+		url("./YS Display-Medium.svg#YSDisplay-Medium") format("svg");
+		font-weight: 500;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Display";
+		src: url("./YS Display-Bold.eot");
+		src: url("./YS Display-Bold.eot?#iefix") format("embedded-opentype"),
+		url("./YS Display-Bold.woff2") format("woff2"),
+		url("./YS Display-Bold.woff") format("woff"),
+		url("./YS Display-Bold.ttf") format("truetype"),
+		url("./YS Display-Bold.svg#YSDisplay-Bold") format("svg");
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Display";
+		src: url("./YS Display-Heavy.eot");
+		src: url("./YS Display-Heavy.eot?#iefix") format("embedded-opentype"),
+		url("./YS Display-Heavy.woff2") format("woff2"),
+		url("./YS Display-Heavy.woff") format("woff"),
+		url("./YS Display-Heavy.ttf") format("truetype"),
+		url("./YS Display-Heavy.svg#YSDisplay-Heavy") format("svg");
+		font-weight: 900;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Light.eot");
+		src: url("./YS Text-Light.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Light.woff2") format("woff2"),
+		url("./YS Text-Light.woff") format("woff"),
+		url("./YS Text-Light.ttf") format("truetype"),
+		url("./YS Text-Light.svg#YSText-Light") format("svg");
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Light Italic.eot");
+		src: url("./YS Text-Light Italic.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Light Italic.woff2") format("woff2"),
+		url("./YS Text-Light Italic.woff") format("woff"),
+		url("./YS Text-Light Italic.ttf") format("truetype"),
+		url("./YS Text-Light Italic.svg#YSText-LightItalic") format("svg");
+		font-weight: 300;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("YS Text-Regular.woff2") format("woff2");
+		src: url("./YS Text-Regular.eot");
+		src: url("./YS Text-Regular.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Regular.woff2") format("woff2"),
+		url("./YS Text-Regular.woff") format("woff"),
+		url("./YS Text-Regular.ttf") format("truetype"),
+		url("./YS Text-Regular.svg#YSText-Regular") format("svg");
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Regular Italic.eot");
+		src: url("./YS Text-Regular Italic.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Regular Italic.woff2") format("woff2"),
+		url("./YS Text-Regular Italic.woff") format("woff"),
+		url("./YS Text-Regular Italic.ttf") format("truetype"),
+		url("./YS Text-Regular Italic.svg#YSText-RegularItalic") format("svg");
+		font-weight: 400;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Medium.eot");
+		src: url("./YS Text-Medium.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Medium.woff2") format("woff2"),
+		url("./YS Text-Medium.woff") format("woff"),
+		url("./YS Text-Medium.ttf") format("truetype"),
+		url("./YS Text-Medium.svg#YSText-Medium") format("svg");
+		font-weight: 500;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Medium Italic.eot");
+		src: url("./YS Text-Medium Italic.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Medium Italic.woff2") format("woff2"),
+		url("./YS Text-Medium Italic.woff") format("woff"),
+		url("./YS Text-Medium Italic.ttf") format("truetype"),
+		url("./YS Text-Medium Italic.svg#YSText-MediumItalic") format("svg");
+		font-weight: 500;
+		font-style: italic;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Bold.eot");
+		src: url("./YS Text-Bold.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Bold.woff2") format("woff2"),
+		url("./YS Text-Bold.woff") format("woff"),
+		url("./YS Text-Bold.ttf") format("truetype"),
+		url("./YS Text-Bold.svg#YSText-Bold") format("svg");
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: "YS Text";
+		src: url("./YS Text-Bold Italic.eot");
+		src: url("./YS Text-Bold Italic.eot?#iefix") format("embedded-opentype"),
+		url("./YS Text-Bold Italic.woff2") format("woff2"),
+		url("./YS Text-Bold Italic.woff") format("woff"),
+		url("./YS Text-Bold Italic.ttf") format("truetype"),
+		url("./YS Text-Bold Italic.svg#YSText-BoldItalic") format("svg");
+		font-weight: 700;
+		font-style: italic;
+	}

@@ -1,0 +1,27 @@
+@use "variables" as *;
+@use "mixins";
+
+.state {
+  @include mixins.flex(column);
+  align-items: center;
+
+  &__image {
+    max-width: 32rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__action {
+    margin-top: 2rem;
+  }
+}

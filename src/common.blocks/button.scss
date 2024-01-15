@@ -1,0 +1,21 @@
+@use "variables" as *;
+@use "mixins";
+
+.button {
+  @include mixins.button($baseFontColor, $secondary, $hover);
+
+  &_outline {
+    @include mixins.button($baseFontColor, white, $secondaryBackground);
+    border: 2px solid $secondaryBackground;
+
+    &:hover {
+      color: white;
+      background-color: $secondaryBackground!important;
+    }
+
+    &:disabled {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
